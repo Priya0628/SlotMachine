@@ -60,15 +60,17 @@ const getNumberOfLines = () => {
 // Function 3: Get Bet Amount
 const getBet = (balance, lines) => {
   while (true) {
-    const bet = prompt("Enter the bet amount: ");
+    const bet = prompt(`Enter the bet amount per line (Max: $${(balance / lines).toFixed(2)}): `);
     const numberBet = parseFloat(bet);
-    if (isNaN(numberBet) || numberBet > balance / lines || numberBet <= 0) {
-      console.log("Invalid bet. Try again.");
+
+    if (isNaN(numberBet) || numberBet <= 0 || numberBet * lines > balance) {
+      console.log(`Invalid bet. Maximum total bet allowed: $${balance.toFixed(2)}`);
     } else {
       return numberBet;
     }
   }
 };
+
 
 // Function 4: Spin the Slot Machine
 const spin = () => {
