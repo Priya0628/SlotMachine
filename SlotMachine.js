@@ -1,3 +1,12 @@
+//1.Deposite some money to start the game 
+// 2.How many lines to bet 
+// 3. Collect a bet amount
+// 4.Spin a slot machine 
+// 5.Check if they won
+// 6. Give them their winnings 
+// 7.Play the game again 
+
+// Installed npm i prompt-sync - to get input from the user "Import it here"
 const prompt = require("prompt-sync")(); // Import prompt-sync
 
 // Global Variables
